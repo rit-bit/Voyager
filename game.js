@@ -1,5 +1,7 @@
-const ironHeader = document.querySelector('#iron-header');
-const fuelHeader = document.querySelector('#fuel-header');
+const ironAmount = document.querySelector('#iron-amount');
+const fuelAmount = document.querySelector('#fuel-amount');
+const ironIncome = document.querySelector('#iron-income');
+const fuelIncome = document.querySelector('#fuel-income');
 const ironBtn = document.querySelector('#iron-btn');
 const fuelBtn = document.querySelector('#fuel-btn');
 
@@ -23,8 +25,10 @@ fuelBtn.addEventListener("click", () => {
 });
 
 window.setInterval(() => {
-    ironHeader.innerHTML = `Iron: ${iron}`;
-    fuelHeader.innerHTML = `Fuel: ${fuel}`;
+    ironAmount.innerHTML = iron;
+    fuelAmount.innerHTML = fuel;
+    ironIncome.innerHTML = miners;
+    fuelIncome.innerHTML = fuelers;
 }, 50);
 
 window.setInterval(() => {
